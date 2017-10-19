@@ -18,6 +18,6 @@ npm install robotjs
  node teste.js
 
 ```
-## Releases
--update in 19/10/2012
+## Atualizações
+-Atualizado em 19-10-2012.
 
