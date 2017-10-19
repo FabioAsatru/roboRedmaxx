@@ -14,7 +14,7 @@ driver.findElement(By.id("MemberLoginForm_LoginForm_QUsername")).sendKeys("fabio
 console.log('inserindo nome....');
 
 driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).clear();
-driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).sendKeys("Fenrirlokison123");
+driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).sendKeys("Testesenha");
 console.log('inserindo senha....');
 driver.findElement(By.className("qlik-submit")).click();
 var wtg = setInterval(function () {

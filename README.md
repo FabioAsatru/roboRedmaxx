@@ -1,8 +1,10 @@
 # Robo Redmaxx
-## Automação do para processo de backup
+## Bot para processo de backup
 >Segue os passos de configuração e execução de robo.
 
--Necessaria instalação do [Node JS](https://nodejs.org/en/download/).
+- Necessaria instalação do [Node JS](https://nodejs.org/en/download/).
+- Para utilizar a nova versão do selenium e necessario baixar o [Drive Firefox](https://github.com/mozilla/geckodriver/releases/)
+- Inserir o drive na variavel de ambiente do sistema operacional utilizado.
 
 -Apos a instalação criar projeto e executar os seguintes comandos
 
