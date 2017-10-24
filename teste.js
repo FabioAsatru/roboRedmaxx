@@ -1,4 +1,4 @@
-/*
+
 
 var webdriver = require('selenium-webdriver'),
 By = webdriver.By,
@@ -13,11 +13,13 @@ var driver = new webdriver.Builder()
 console.log('**************************ROBO REDMAXX*************************************');
 driver.get('https://us.qlikcloud.com/hub/personal');
 driver.findElement(By.id("MemberLoginForm_LoginForm_QUsername")).clear();
-driver.findElement(By.id("MemberLoginForm_LoginForm_QUsername")).sendKeys("fabioAsatru");
+//inserir usuario
+driver.findElement(By.id("MemberLoginForm_LoginForm_QUsername")).sendKeys("rennan.s.s");
 console.log('inserindo nome....');
 
 driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).clear();
-driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).sendKeys("Fenrirlokison123");
+//inserir senha
+driver.findElement(By.id("MemberLoginForm_LoginForm_qPassword")).sendKeys("Avenger7x");
 console.log('inserindo senha....');
 driver.findElement(By.className("qlik-submit")).click();
 var wtg = setInterval(function () {
@@ -38,20 +40,86 @@ setTimeout(function(){
     
     setTimeout(function(){
         robot.setKeyboardDelay(80);
-        robot.typeString("C:\\Users\\fabio\\Documents\\Qlik\\Sense\\Apps\\ENGECO_NEW.qvf");
+        robot.typeString("C:\\Users\\fabio\\Documents\\Qlik\\Sense\\Apps\\flex_saude.qvf");
+        robot.keyTap("enter");
         robot.keyTap("enter");
     },
     10000);
     setTimeout(function () {
              driver.findElement(By.id("done-upload")).click();
+
+
+             setTimeout(function () {
+
+                 driver.get('https://us.qlikcloud.com/hub/shared');
+                 
+                 setTimeout(function(){
+                     robot.setMouseDelay(6);
+                     robot.moveMouse(400, 300);
+                     robot.mouseClick('right');
+                     //publicar
+                     //robot.moveMouse(480, 300);
+                     // remover   
+                     robot.moveMouse(480, 400);
+                     robot.moveMouse(480, 420);
+                     robot.mouseClick();
+                     robot.keyTap('enter');
+                     robot.keyTap('enter');
+                    
+                     setTimeout(function () {
+                         robot.setMouseDelay(6);
+                         robot.moveMouse(400, 300);
+                         robot.mouseClick('right');
+                         //publicar
+                         //robot.moveMouse(480, 300);
+                         // remover   
+                         robot.moveMouse(480, 400);
+                         robot.moveMouse(480, 420);
+                         robot.mouseClick();
+                         robot.keyTap('enter');
+                         robot.keyTap('enter');
+
+
+                     }, 1000);
+                     
+
+                 }, 10000);
+                 
+             }, 10000);
+
     },
     60000);
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //remover aplicações publicadadas
+
+
+    /*
     setTimeout(function(){
-        robot.moveMouse(400, 400);
+        robot.setMouseDelay(6);
+        robot.moveMouse(400, 300);
+        robot.mouseClick('right');
+        //publicar
+        robot.moveMouse(480, 300);
+        // remover   robot.moveMouse(480, 400);
+        robot.moveMouse(480, 420);
+        robot.mouseClick();
+        robot.keyTap('enter');
+        robot.keyTap('enter');
+
+        driver.get('https://us.qlikcloud.com/hub/shared');
 
     }, 70000 );
-
+    */
     
 }, 60000);
 
@@ -59,7 +127,7 @@ setTimeout(function(){
 
 
 
-*/
+/*
 
 var robot = require("robotjs");
 
@@ -76,3 +144,4 @@ var robot = require("robotjs");
 
     }, 2000);
 
+*/
