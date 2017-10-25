@@ -39,109 +39,170 @@ setTimeout(function(){
     robot.moveMouse(400, 400);
     
     setTimeout(function(){
+        //arquivo 1
         robot.setKeyboardDelay(80);
         robot.typeString("C:\\Users\\fabio\\Documents\\Qlik\\Sense\\Apps\\flex_saude.qvf");
         robot.keyTap("enter");
         robot.keyTap("enter");
+      
+        //arquivo 2
+        setTimeout(function(){
+            driver.findElement(By.id("uploadTrigger")).click();
+            console.log('press uploadTrigger 2');
+            setTimeout(function(){
+                robot.setKeyboardDelay(80);
+                robot.typeString("C:\\Users\\fabio\\Documents\\Qlik\\Sense\\Apps\\flex_saude(2).qvf");
+                robot.keyTap("enter");
+                robot.keyTap("enter");
+            }, 2000);
+            
+
+        }, 2000);    
+        
+
     },
     10000);
+
+
+
     setTimeout(function () {
              driver.findElement(By.id("done-upload")).click();
 
-
+             
+             //deletar publicações antigas
              setTimeout(function () {
 
                  driver.get('https://us.qlikcloud.com/hub/shared');
                  
-                 setTimeout(function(){
-                     robot.setMouseDelay(6);
-                     robot.moveMouse(400, 300);
-                     robot.mouseClick('right');
-                     //publicar
-                     //robot.moveMouse(480, 300);
-                     // remover   
-                     robot.moveMouse(480, 400);
-                     robot.moveMouse(480, 420);
-                     robot.mouseClick();
-                     robot.keyTap('enter');
-                     robot.keyTap('enter');
-                    
+                 //agrupar por data de publicação                    
                      setTimeout(function () {
                          robot.setMouseDelay(6);
-                         robot.moveMouse(400, 300);
-                         robot.mouseClick('right');
-                         //publicar
-                         //robot.moveMouse(480, 300);
-                         // remover   
-                         robot.moveMouse(480, 400);
-                         robot.moveMouse(480, 420);
-                         robot.mouseClick();
+                         robot.moveMouse(1280, 150);
+                         robot.mouseClick('left');
+                         robot.setMouseDelay(10);
+                         robot.moveMouse(1280, 200);
+                         robot.keyTap('down');
                          robot.keyTap('enter');
-                         robot.keyTap('enter');
+                         robot.moveMouse(1182, 150);
+                         robot.mouseClick('left');
 
+                    
+                         //delete 1
+                         setTimeout(function () {
+                             robot.setMouseDelay(6);
+                             robot.moveMouse(400, 300);
+                             robot.mouseClick('right');
+                             //publicar
+                             //robot.moveMouse(480, 300);
+                             // remover   
+                             robot.moveMouse(480, 400);
+                             robot.moveMouse(480, 420);
+                             robot.mouseClick();
+                             robot.keyTap('enter');
+                             robot.keyTap('enter');
 
-                     }, 1000);
-                     
+                             //delete 2
+                             setTimeout(function () {
+                                 robot.setMouseDelay(6);
+                                 robot.moveMouse(400, 300);
+                                 robot.mouseClick('right');
+                                 //publicar
+                                 //robot.moveMouse(480, 300);
+                                 // remover   
+                                 robot.moveMouse(480, 400);
+                                 robot.moveMouse(480, 420);
+                                 robot.mouseClick();
+                                 robot.keyTap('enter');
+                                 robot.keyTap('enter');
+
+                                //publicar app atualizadas
+                                setTimeout(function(){
+                                    driver.get('https://us.qlikcloud.com/hub/personal');
+
+                                    //agrupar por data de publicação                    
+                                    setTimeout(function () {
+                                        robot.setMouseDelay(6);
+                                        robot.moveMouse(1280, 150);
+                                        robot.mouseClick('left');
+                                        robot.setMouseDelay(10);
+                                        robot.moveMouse(1280, 200);
+                                        robot.keyTap('down');
+                                        robot.keyTap('enter');
+                                        robot.moveMouse(1182, 150);
+                                        robot.mouseClick('left');
+                                        
+                                        //insert1
+                                        setTimeout(function () {
+                                            robot.setMouseDelay(6);
+                                            robot.moveMouse(400, 300);
+                                            robot.mouseClick('right');
+                                            //publicar
+                                            robot.moveMouse(480, 300);
+                                            // remover   
+                                            //robot.moveMouse(480, 400);
+                                            robot.moveMouse(480, 420);
+                                            robot.mouseClick();
+                                            robot.keyTap('enter');
+                                            robot.keyTap('enter');
+                                       
+                                            //insert2
+                                            setTimeout(function () {
+                                                robot.setMouseDelay(6);
+                                                robot.moveMouse(400, 300);
+                                                robot.mouseClick('right');
+                                                //publicar
+                                                robot.moveMouse(480, 300);
+                                                // remover   
+                                                //robot.moveMouse(480, 400);
+                                                robot.moveMouse(480, 420);
+                                                robot.mouseClick();
+                                                robot.keyTap('enter');
+                                                robot.keyTap('enter');
+                                            }, 2000);
+        
+                                        }, 2000);
+                                    
+                                    },2000);
+
+                                }, 2000)
+
+                             }, 2000);
+                    
+                    }, 3000)
 
                  }, 10000);
                  
-             }, 10000);
+             }, 20000);
+
+
+
+
 
     },
     60000);
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    //remover aplicações publicadadas
+}, 70000);
 
-
-    /*
-    setTimeout(function(){
-        robot.setMouseDelay(6);
-        robot.moveMouse(400, 300);
-        robot.mouseClick('right');
-        //publicar
-        robot.moveMouse(480, 300);
-        // remover   robot.moveMouse(480, 400);
-        robot.moveMouse(480, 420);
-        robot.mouseClick();
-        robot.keyTap('enter');
-        robot.keyTap('enter');
-
-        driver.get('https://us.qlikcloud.com/hub/shared');
-
-    }, 70000 );
-    */
-    
-}, 60000);
 
 
 
 
 
 /*
-
 var robot = require("robotjs");
 
 
     setTimeout(function () {
         robot.setMouseDelay(6);
-        robot.moveMouse(400, 300);
-        robot.mouseClick('right');
-        robot.moveMouse(480, 300);
-     // remover   robot.moveMouse(480, 400);
-        robot.moveMouse(480, 420);
-        robot.mouseClick();
+        robot.moveMouse(1280, 150);
+        robot.mouseClick('left');
+        robot.setMouseDelay(10);
+        robot.moveMouse(1280, 200);
+        robot.keyTap('down');
         robot.keyTap('enter');
-
+        robot.moveMouse(1182, 150);
+        robot.mouseClick('left');
+        
     }, 2000);
-
 */
