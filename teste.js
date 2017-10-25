@@ -39,6 +39,8 @@ setTimeout(function(){
     robot.moveMouse(400, 400);
     
     setTimeout(function(){
+        
+        console.log('Inserindo 1º app');    
         //arquivo 1
         robot.setKeyboardDelay(80);
         robot.typeString("C:\\Users\\fabio\\Documents\\Qlik\\Sense\\Apps\\flex_saude.qvf");
@@ -47,6 +49,7 @@ setTimeout(function(){
       
         //arquivo 2
         setTimeout(function(){
+            console.log('Inserindo 2º app');
             driver.findElement(By.id("uploadTrigger")).click();
             console.log('press uploadTrigger 2');
             setTimeout(function(){
@@ -89,7 +92,8 @@ setTimeout(function(){
                     
                          //delete 1
                          setTimeout(function () {
-                             robot.setMouseDelay(6);
+                            console.log('Deletando 1º app');
+                            robot.setMouseDelay(6);
                              robot.moveMouse(400, 300);
                              robot.mouseClick('right');
                              //publicar
@@ -103,6 +107,7 @@ setTimeout(function(){
 
                              //delete 2
                              setTimeout(function () {
+                                 console.log('Deletando 2º app');
                                  robot.setMouseDelay(6);
                                  robot.moveMouse(400, 300);
                                  robot.mouseClick('right');
@@ -121,6 +126,7 @@ setTimeout(function(){
 
                                     //agrupar por data de publicação                    
                                     setTimeout(function () {
+                                        console.log('Agrupando por data');
                                         robot.setMouseDelay(6);
                                         robot.moveMouse(1280, 150);
                                         robot.mouseClick('left');
@@ -133,6 +139,7 @@ setTimeout(function(){
                                         
                                         //insert1
                                         setTimeout(function () {
+                                            console.log('Publicando 1º app');
                                             robot.setMouseDelay(6);
                                             robot.moveMouse(400, 300);
                                             robot.mouseClick('right');
@@ -147,6 +154,7 @@ setTimeout(function(){
                                        
                                             //insert2
                                             setTimeout(function () {
+                                                console.log('Publicando 2º app');
                                                 robot.setMouseDelay(6);
                                                 robot.moveMouse(400, 300);
                                                 robot.mouseClick('right');
